@@ -1,0 +1,19 @@
+public class StowersPlayer extends Player{
+	public StowersPlayer() {
+		myName="$$YOLO$$";
+    		
+	}
+    public int ai(GameBoard gb) {
+    	int[][] board = gb.getBoard();
+    	int yolo = (int)(Math.random()*board[0].length);
+    	while(!gb.isLegalMove(yolo)){
+    		if(board[0][0] == myColor) {		
+    		yolo = (int)(Math.random()*board[0].length);
+    			}
+    			return yolo;
+    		
+
+    	}
+	return yolo;
+    }
+}
